@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("box1");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	text.style.outline = "solid 1px";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction1() {
+  var checkBox = document.getElementById("box4");
+  var text = document.getElementById("text2");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+	text.style.outline ="solid 1px";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var checkBox1 = document.getElementById("box5");
+  var checkBox2 = document.getElementById("box6");
+  var text1 = document.getElementById("text3");
+  var text2 = document.getElementById("text4");
+  if (checkBox1.checked == true){
+    text2.style.display = "block";
+	text2.style.outline = "solid 1px";
+  } else {
+     text2.style.display = "none";
+  }
+  if (checkBox2.checked == true){
+    text1.style.display = "block";
+	text1.style.outline = "solid 1px";
+  } else {
+     text1.style.display = "none";
+  }
+}
+</script>
+<h1>Enterobacter Characteristics Chart</h1>
+
+<p><i> Check whether Gram positive or negative?</i></p>
+<input type="button" onclick="alert('No Bacteria Found!')" value="Gram Positive">
+
+<input type="button" onclick="alert('Motile or Non-Motile?')" value="Gram Negative">
+<br></br>
+
+
+<input type="checkbox" id="box1" value="Capsulated" onclick="myFunction()" > Capsulated
+<br>
+<input type="checkbox" id="box2" value="Non-Capsulated" onclick="alert('B-Gal + or -?')">Non-Capsulated 
+<br><br>
+<p id="text" style="display:none">Organisms include Shigella and klebsiella</p>
+
+<input type="checkbox" id="box3" value="BGal+" onclick="alert('Citrate + or -?')" >B-Gal Positive
+
+<br>
+<input type="checkbox" id="box4" value="BGal-" onclick="myFunction1()" > B-Gal Negative
+<br>
+<p id="text2" style="display:none">Organisms include Salmonella and Proteus</p>
+<br></br>
+
+<input type="checkbox" id="box5" value="citrate+" onclick="myFunction3()" >Citrate Positive
+
+<br>
+<input type="checkbox" id="box6" value="citrate-" onclick="myFunction3()" > Citrate Negative
+<br>
+<br></br>
+
+
+<p id="text4" style="display:none">Organism include Serratia, Citrobacter, and Enterobacter</p>
+<p id="text3" style="display:none">Organism include E.Coli</p>
+</body>
+</html>
